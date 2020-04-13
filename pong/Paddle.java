@@ -2,6 +2,7 @@ class Paddle{
 	private int xPos = 0;
 	private int yPos = 0;
 	private int length = 5;
+	private int FIELDHEIGHT = 16;
 
 	
 	Paddle(int port){
@@ -29,11 +30,13 @@ class Paddle{
 	}
 
 	public void moveUp(){
-		this.yPos--;
+		if(this.yPos != 0)
+			this.yPos--;
 	}
 
 	public void moveDown(){
-		this.yPos++;
+		if(this.yPos != FIELDHEIGHT-length)
+			this.yPos++;
 	}
 	
 }
